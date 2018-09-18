@@ -1,0 +1,30 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Chapter 4, Exercise 2</title>
+</head>
+<body>
+    <script>
+        function timesTable(tableNumber, tableStart, tableEnd) {
+           for (i = tableStart; i <= tableEnd; i++) {
+               var total = i * tableNumber;
+               document.write(tableNumber + " x " + i + " = " + total + "<br>");
+           }
+        }
+        
+        var userTable;
+
+        while ((userTable = parseInt(prompt("Enter the times table", -1), 10)) != -1) {
+            while (isNaN(userTable) === true) {
+                userTable = parseInt(prompt(userTable + " is not a " + "valid number, please retry", -1), 10);
+            }
+            if (userTable === -1) {
+                break;
+            }
+            document.write("<br>The " + userTable + " times table<br>");
+            timesTable(userTable, 1, 20);
+        }
+    </script>
+</body>
+</html>

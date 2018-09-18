@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Chapter 5, Example 1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <script>
+        let myString = `Welcome to Wrox books. ` + `The Wrox website is www.wrox.com. ` + `Visit the Wrox website today. Thanks for buying Wrox.`;
+
+        let foundAtPosition = 0;
+        let wroxCount = 0;
+
+        while (foundAtPosition !== -1) {
+            foundAtPosition = myString.indexOf(`Wrox`, foundAtPosition);
+
+            if (foundAtPosition !== -1) {
+                wroxCount++;
+                foundAtPosition++;
+            }
+        }
+
+        document.write(`There are ${wroxCount} occurrences of the word Wrox`);
+    </script>
+</body>
+</html>

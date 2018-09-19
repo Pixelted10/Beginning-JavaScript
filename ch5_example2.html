@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Page Title</title>
+</head>
+<body>
+    <script>
+        const checkCharType = (charToCheck) => {
+            let returnValue =`O`;
+            const charCode = charToCheck.charCodeAt(0);
+
+            if (charCode >= `A`.charCodeAt(0) && charCode <= `Z`.charCodeAt(0)) {
+                returnValue = `U`;
+            } else if (charCode >= `a`.charCodeAt(0) && charCode <= `z`.charCodeAt(0)) {
+                returnValue = `L`;
+            } else if (charCode >= `0`.charCodeAt(0) && charCode <= `9`.charCodeAt(0)) {
+                returnValue = `N`;
+            }
+
+            return returnValue;
+        }
+
+        let myString = prompt("Enter some text", "Hello World!");
+
+        switch(checkCharType(myString)) {
+            case `U`:
+                document.write(`First character was upper case`);
+                break;
+            case `L`:
+                document.write(`First character was lower case`);
+                break;
+            case `N`:
+                document.write(`First character was a number`);
+                break;
+            default:
+                document.write(`First character was neither a character or a number`);
+        }
+    </script>
+</body>
+</html>

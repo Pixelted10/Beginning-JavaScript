@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Chapter 5, Example 3</title>
+</head>
+<body>
+    <script>
+        let myShopping = [`Eggs`, `Milk`, `Potatoes`, `Cereal`, `Banana`];
+
+        let ord = parseInt(prompt(`Enter 1 for alphabetical order, and -1 for reverse order`, 1), 10);
+
+        if (ord === 1) {
+            myShopping.sort();
+            document.write(myShopping.join(`<br>`));
+        } else if (ord === -1) {
+            myShopping.sort();
+            myShopping.reverse();
+            document.write(myShopping.join(`<br>`));
+        } else {
+            document.write(`That is not a valid input`);
+        }
+    </script>
+</body>
+</html>

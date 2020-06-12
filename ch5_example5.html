@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Chapter 5, Example 5</title>
+</head>
+<body>
+    <script>
+        const fix = (fixNumber, decimalPlaces) => {
+            let div = Math.pow(10, decimalPlaces);
+            fixNumber = Math.round(fixNumber * div) / div;
+            return fixNumber;
+        }
+
+        let number1 = parseFloat(prompt(`Enter the number with decimal places you want to fix`, ``), 10);
+
+        let number2 = parseInt(prompt(`How mant decimal places do you want?`, ``), 10);
+
+        document.write(`${number1} fixed to ${number2} decimal places is: ${fix(number1, number2)}.`)
+    </script>
+</body>
+</html>
